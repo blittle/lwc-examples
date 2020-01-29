@@ -26,7 +26,7 @@ export default class Greeting extends LightningElement {
     isAnimating = true;
 
     @api
-    name
+    name;
 
     @api
     set speed(value) {

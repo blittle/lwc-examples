@@ -1,9 +1,9 @@
 import { LightningElement } from 'lwc';
 
 export default class App extends LightningElement {
-  name = "John"
+    name = 'John';
 
-  updateName(event) {
-    this.name = event.detail;
-  }
+    updateName(event) {
+        this.name = event.detail;
+    }
 }
