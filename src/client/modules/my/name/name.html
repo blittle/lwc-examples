@@ -7,4 +7,12 @@
         autofocus
     />
     <h3>{name}</h3>
+
+    <select>
+        <template for:each={viewCompanies} for:item="company">
+            <option key={company.id} selected={company.selected}>
+                {company.name}
+            </option>
+        </template>
+    </select>
 </template>
