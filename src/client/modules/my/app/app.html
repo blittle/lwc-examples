@@ -1,6 +1,6 @@
 <template>
     <div class="center greeting">
-        <my-greeting speed="medium"></my-greeting>
-        <my-name></my-name>
+        <my-greeting name={name} speed="medium"></my-greeting>
+        <my-name onnamechange={updateName} name={name}></my-name>
     </div>
 </template>

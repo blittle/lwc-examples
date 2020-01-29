@@ -1,3 +1,9 @@
 <template>
-    <input type="text" placeholder="Name" autofocus />
+    <input
+        value={name}
+        oninput={update}
+        type="text"
+        placeholder="Name"
+        autofocus>
+    <h3>{name}</h3>
 </template>
