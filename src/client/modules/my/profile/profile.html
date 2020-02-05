@@ -9,6 +9,16 @@
             <label for="address">Street address: </label>
             <input type="text" name="address" value={street} />
         </div>
+        <div>
+            <label for="employer">Employer: </label>
+            <select name="employer">
+                <template for:each={viewCompanies} for:item="company">
+                    <option key={company.id} selected={company.selected}>
+                        {company.name}
+                    </option>
+                </template>
+            </select>
+        </div>
         <div class="footer">
             <button>
                 <img
