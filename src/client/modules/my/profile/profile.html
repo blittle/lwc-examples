@@ -1,35 +1,25 @@
 <template>
-    <div class="card">
-        <img src={profileImage} alt={name} />
-        <div>
-            <label for="name">Name: </label>
-            <input type="text" name="name" value={name} />
+    <my-card>
+        <img slot="header" src={profileImage} alt={name} />
+        <div slot="body">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" value={name} />
+            </div>
+            <div>
+                <label for="address">Street address: </label>
+                <input type="text" name="address" value={street} />
+            </div>
+            <div>
+                <label for="employer">Employer: </label>
+                <select name="employer">
+                    <template for:each={viewCompanies} for:item="company">
+                        <option key={company.id} selected={company.selected}>
+                            {company.name}
+                        </option>
+                    </template>
+                </select>
+            </div>
         </div>
-        <div>
-            <label for="address">Street address: </label>
-            <input type="text" name="address" value={street} />
-        </div>
-        <div>
-            <label for="employer">Employer: </label>
-            <select name="employer">
-                <template for:each={viewCompanies} for:item="company">
-                    <option key={company.id} selected={company.selected}>
-                        {company.name}
-                    </option>
-                </template>
-            </select>
-        </div>
-        <div class="footer">
-            <button>
-                <img
-                    src="https://cdn2.iconfinder.com/data/icons/social-media-square-set/960/Twitter_Sq-512.png"
-                />
-            </button>
-            <button>
-                <img
-                    src="https://lh3.googleusercontent.com/proxy/C9Kwy95Z6jbvYv7CUmZLGJ49TOVhnOzAA-kYCe0m6oWQvfIBVhoFNSb37920RuCHOOFkLqGKBDCmUfJQv2zLm8KHbunI_o81hdoV-DDCJhw0VXfgiYnM_mW3ewImjDhpxzrxbEZyfD6prg"
-                />
-            </button>
-        </div>
-    </div>
+    </my-card>
 </template>

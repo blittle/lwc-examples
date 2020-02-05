@@ -1,0 +1,25 @@
+.card {
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 0px #8e8e8e;
+    display: inline-block;
+    padding: 16px;
+}
+
+.footer {
+    margin: 8px -16px -16px -16px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 0;
+}
+
+button:first-child {
+    margin-right: 8px;
+}
+
+img {
+    width: 50px;
+}
